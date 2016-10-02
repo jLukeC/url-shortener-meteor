@@ -1,7 +1,31 @@
 <template name="top">
   {{> navigation}}
   <div class="container">
-    <h2> Top Links </h2>
-    {{test.longUrl}}
+    <h2> Top Urls </h2>
+
+
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Short Url</th>
+          <th>Long Url</th>
+          <th>Views</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each topUrls}}
+        {{> topUrlDetail }}
+        {{/each}}
+      </tbody>
+    </table>
+
   </div>
+</template>
+
+<template name="topUrlDetail">
+  <tr>
+    <td><a href="/{{shortUrl}}">{{shortUrl}}</a></td>
+    <td><a href="{{longUrl}}">{{longUrl}}</a></td>
+    <td>{{views}}</td>
+  </tr>
 </template>
