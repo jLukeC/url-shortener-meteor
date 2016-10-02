@@ -37,10 +37,10 @@ Template.createUrl.events({
         // generate short url if no custom url
         if (!customUrl) {
             shortUrl = generateUrl(4);
-            var iterations = 0;
+            var iterations = 5;
             // expand the length of the generated url if needed
             while (Links.findOne({shortUrl: shortUrl})) {
-                shortUrl = generateUrl(inputUrl.length / 2 + iterations);
+                shortUrl = generateUrl(iterations);
                 iterations++;
             }
         }
