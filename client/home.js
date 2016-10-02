@@ -1,4 +1,7 @@
+
 var generateUrl = function (len) {
+    // Given a length requirement, this function generates a
+    // url consisting of characters from these 62 possibilities (A-z,0-9)
     var language = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var generatedUrl = ''
     var generatedUrlLength = Math.max(len,3);
@@ -58,6 +61,7 @@ Template.createUrl.events({
                         'your input contains empty or invalid urls. ' +
                         'Please include \'http(s):\/\/\'');
         } else {    
+            // if inputs are valid, upload them to the database
             Links.insert(submission, function (e,r) {
                 Session.set('newUrl',shortUrl)
             });
@@ -68,5 +72,4 @@ Template.createUrl.events({
 Template.createUrl.helpers({
     'newUrl': function () {return Session.get('newUrl');},
     'inputError': function () {return Session.get('inputError');}
-
 });
