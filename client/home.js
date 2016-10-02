@@ -55,8 +55,8 @@ Template.createUrl.events({
         // if not, send an error
         if (!isValid) {
             Session.set('inputError',
-                        'your input contains empty or invalid urls.' +
-                        'Also please include \'http:\/\/\'');
+                        'your input contains empty or invalid urls. ' +
+                        'Please include \'http(s):\/\/\'');
         } else {    
             Links.insert(submission, function (e,r) {
                 Session.set('newUrl',shortUrl)
