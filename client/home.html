@@ -2,5 +2,19 @@
   {{> navigation}}
   <div class="container">
     <h2> URL Shortener </h2>
+    <form>
+      <div class="row">
+        <div class="six columns">
+          <label for="inputLink">Url you want shortened:</label>
+          <input class="u-full-width" type="text" placeholder="http://google.com" id="inputLink">
+        </div>
+        <div class="six columns">
+          <label for="customLink">(Optional) Custom Shortened Link</label>
+          <input class="u-full-width" type="text" id="customLink">
+        </div>
+      </div>
+      <input class="button-primary new-url" type="submit" value="Submit">
+    </form>
+
   </div>
 </template>
