@@ -30,7 +30,8 @@ Template.home.events({
         //}
         Links.insert({
             longUrl: inputUrl,
-            shortUrl: shortUrl
+            shortUrl: shortUrl,
+            views: 0
         });
     }
 });
