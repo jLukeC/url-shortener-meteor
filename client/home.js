@@ -23,7 +23,7 @@ Template.createUrl.events({
 
         var inputUrl = $('#inputLink').val();
         var customUrl = $('#customLink').val();
-        var shortUrl = customUrl
+        var shortUrl = customUrl;
 
 
         // check if the custom url has been taken
@@ -33,6 +33,12 @@ Template.createUrl.events({
             return;
         }
 
+        var badChars = new RegExp(/[~`!#$%\^&*+=\-\[\]\\' ;,/{}|\\":<>\?]/);
+        if (badChars.test(customUrl)) {
+            Session.set('inputError',
+                        'Sorry your custom url is invalid');
+            return;
+        }
 
         // generate short url if no custom url
         if (!customUrl) {
