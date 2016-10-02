@@ -14,6 +14,10 @@ Template.createUrl.events({
     'submit'(event) {
         event.preventDefault();
 
+        Session.set('inputError','');
+        Session.set('newUrl','');
+
+
         var inputUrl = $('#inputLink').val();
         var customUrl = $('#customLink').val();
         var shortUrl = customUrl
