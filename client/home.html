@@ -1,7 +1,15 @@
 <template name="home">
   {{> navigation}}
   <div class="container">
-    <h2> URL Shortener </h2>
+    {{> createUrl}}
+  </div>
+  <div class="container">
+    
+  </div>
+</template>
+
+<template name="createUrl">
+<h3> Create New Url </h3>
     <form>
       <div class="row">
         <div class="six columns">
@@ -15,6 +23,12 @@
       </div>
       <input class="button-primary new-url" type="submit" value="Submit">
     </form>
-
-  </div>
+    {{#if newUrl}} 
+    <p>Success! Your new url is <a href='/{{newUrl}}'>{{newUrl}}</a>.</p>
+    <p>You can view stats on your url at <a href='/about/{{newUrl}}'>about/{{newUrl}}</a></p>
+    {{/if}}
+    {{#if inputError}} 
+    <p>Hmm, {{inputError}}</p>
+    {{/if}}
 </template>
+
