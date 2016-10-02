@@ -11,11 +11,21 @@ Pages
 ### Home
 Here users can create new shortened urls by submitting the form on the page. The form has two fields: the long url and the optional custom link for the url. If the user does not provide a custom link, then a link is automatically generated for them. If an invalid long or custom link is given then the page prompts the user to change their input.
 
+![Home](http://imgur.com/M4Dqb0m.png)
+![Home Valid Input](http://imgur.com/KHwJIJX.png)
+![Home Valid Input Custom](http://imgur.com/b2rDlfb.png)
+![Home Invalid Custom](http://imgur.com/6WcU9Ag.png)
+![Home Invalid Url](http://imgur.com/t1pHr8H.png)
+
 ### Most Visited Urls
 On this page users can see the 10 most viewed links shortened by the site. They have the option to click on the long urls or view the about page for the urls.
 
+![Most Visited](http://imgur.com/aCwjZVd.png)
+
 ### About Url
 This page provides the details on any particular url. This includes their view count, long url and the shortened url.
+
+![About](http://imgur.com/1BrkYEy.png)
 
 Url Generation
 ---
